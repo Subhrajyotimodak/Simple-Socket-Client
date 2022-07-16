@@ -22,7 +22,11 @@
         "./utils/"
       ]
     },
-    "rootDir" : "./",
+    "rootDirs": [
+      "./core",
+      "./react-provider",
+      "./utils"
+    ],
     "declaration": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
