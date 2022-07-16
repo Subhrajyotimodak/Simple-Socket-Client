@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.createSockets = void 0;
-const core_1 = require("core");
+const core_1 = require("../../core");
 function createSockets(namespaces, url, params) {
     const sockets = {};
     namespaces.forEach((namespace) => {

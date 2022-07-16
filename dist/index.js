@@ -28,5 +28,5 @@ const core = __importStar(require("./core"));
 exports.core = core;
 const reactProvider = __importStar(require("./react-provider"));
 exports.reactProvider = reactProvider;
-const utils = __importStar(require("utils"));
+const utils = __importStar(require("./utils"));
 exports.utils = utils;
