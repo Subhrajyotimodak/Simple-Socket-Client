@@ -1,9 +1,11 @@
 {
-  "name": "core",
+  "name": "@react",
   "version": "1.0.0",
   "description": "",
-  "main": "src",
-  "devDependencies": {},
+  "main": "index.js",
+  "devDependencies": {
+    "@types/react" : "^16.14.0"
+  },
   "scripts": {
     "dev" : "tsc --watch",
     "build" : "tsc"
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Subhrajyotimodak/Simple-Socket-Client/issues"
   },
-  "homepage": "https://github.com/Subhrajyotimodak/Simple-Socket-Client#readme"
+  "homepage": "https://github.com/Subhrajyotimodak/Simple-Socket-Client#readme",
+  "peerDependencies" : {
+    "react" : "^16.14.0"
+  }
 }

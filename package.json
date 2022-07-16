@@ -6,7 +6,12 @@
   "module": "commonjs",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc"
+    "build": "rm -rf dist && tsc"
+  },
+  "bin": {
+    "@core": "./@core",
+    "@react": "./@react",
+    "@utils": "./@utils"
   },
   "directories": {
     "lib": "dist"
@@ -18,8 +23,8 @@
     "typescript": "^4.7.4"
   },
   "workspaces": [
-    "react",
-    "core",
-    "utils"
+    "@react",
+    "@core",
+    "@utils"
   ]
 }

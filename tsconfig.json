@@ -7,9 +7,9 @@
     "outDir": "./dist",
     "jsx" : "preserve",
     "paths": {
-      "@core": ["./core/index.ts"],
-      "@react": ["./react/index.ts"],
-      "@utils": ["./utils/index.ts"]
+      "@core": ["./@core/"],
+      "@react": ["./@react/"],
+      "@utils": ["./@utils/"]
     },
     "declaration": true,
     "esModuleInterop": true,

@@ -1,4 +1,4 @@
-import { SocketError } from "utils";
+import { SocketError } from "@utils";
 export interface SocketParams {
     auth: string;
     namespace?: string;

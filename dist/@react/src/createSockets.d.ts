@@ -1,5 +1,4 @@
-import Socket from "core";
-import { SocketParams } from "core/src/Socket";
+import Socket, { SocketParams } from "@core";
 interface Params {
     auth: SocketParams["auth"];
     [key: string]: string;
