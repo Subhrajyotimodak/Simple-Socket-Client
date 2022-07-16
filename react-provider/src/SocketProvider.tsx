@@ -1,5 +1,5 @@
 import React from "react";
-import Socket from "../../core";
+import { Socket } from "core";
 
 interface Props {
   providers: {
@@ -31,4 +31,3 @@ export function useSocket(namespace: string) {
 
   throw new Error("Unable to find socket with namespace " + namespace);
 }
-

@@ -1,4 +1,4 @@
-import Socket, { SocketParams } from "../../core";
+import { Socket, SocketParams } from "core";
 interface Params {
     auth: SocketParams["auth"];
     [key: string]: string;

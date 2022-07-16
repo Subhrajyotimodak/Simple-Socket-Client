@@ -23,9 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.useSocket = exports.createSockets = void 0;
+exports.useSocket = exports.createSockets = exports.SocketProvider = void 0;
 const SocketProvider_1 = __importStar(require("./src/SocketProvider"));
+exports.SocketProvider = SocketProvider_1.default;
 Object.defineProperty(exports, "useSocket", { enumerable: true, get: function () { return SocketProvider_1.useSocket; } });
 const createSockets_1 = require("./src/createSockets");
 Object.defineProperty(exports, "createSockets", { enumerable: true, get: function () { return createSockets_1.createSockets; } });
-exports.default = SocketProvider_1.default;
