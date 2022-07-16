@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    "@types/react" : "^16.14.0"
+    "@types/react": "^16.14.0",
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^8.2.5"
   },
   "scripts": {
-    "dev" : "tsc --watch",
-    "build" : "tsc"
+    "babel-version": "babel --version",
+    "build": "tsc && babel dist --out-dir ../dist/react-provider"
   },
   "repository": {
     "type": "git",
@@ -20,7 +24,7 @@
     "url": "https://github.com/Subhrajyotimodak/Simple-Socket-Client/issues"
   },
   "homepage": "https://github.com/Subhrajyotimodak/Simple-Socket-Client#readme",
-  "peerDependencies" : {
-    "react" : "^16.14.0"
+  "peerDependencies": {
+    "react": "^16.14.0"
   }
 }
