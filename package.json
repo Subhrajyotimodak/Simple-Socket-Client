@@ -1,0 +1,20 @@
+{
+  "name": "simple-socket-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "module": "commonjs",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
+  "directories": {
+    "lib": "dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
