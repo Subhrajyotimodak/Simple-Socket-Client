@@ -1,4 +1,4 @@
-import { Response, SocketError, Request } from "utils";
+import { Response, SocketError, Request } from "../../utils";
 
 export interface SocketParams {
   auth: string;
