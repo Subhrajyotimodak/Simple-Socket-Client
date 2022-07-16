@@ -36,13 +36,5 @@
   ],
   "dependencies": {
     "babel-cli": "^6.26.0"
-  },
-  "files" : [
-    "./dist/core/index.js",
-    "./dist/core/index.d.ts",
-    "./dist/utils/index.d.ts",
-    "./dist/utils/index.js",
-    "./dist/react-provider/index.js",
-    "./dist/react-provider/index.d.ts"
-  ]
+ }
 }
