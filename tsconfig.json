@@ -31,7 +31,8 @@
   "include": [
     "./core",
     "./react-provider",
-    "./utils"
+    "./utils",
+    "./index.ts"
   ],
   "exclude": [
     "node_modules",
