@@ -1,3 +1,5 @@
+import { Response, SocketError, Request } from "utils";
+
 export interface SocketParams {
   auth: string;
   namespace?: string;
@@ -18,6 +20,7 @@ export default class Socket {
     });
     const _url = `${url}?${urlParams.toString()}`;
     this.websocket = new WebSocket(_url);
+    this.connect();
   }
 
   connect() {
@@ -35,7 +38,7 @@ export default class Socket {
     const __data__ = {
       namespace,
       data,
-    };
+    } as Request<T>;
     const request = JSON.stringify(__data__);
 
     if (this.connected) {
@@ -45,17 +48,26 @@ export default class Socket {
     return false;
   }
 
-  recieve<T = any>(namespace: string, callback: (data: T) => void) {
+  recieve<T = any>(
+    namespace: string,
+    onSuccess: (data: T) => void,
+    onError?: (error: SocketError) => void
+  ) {
     if (this.connected) {
       this.websocket.onmessage = (ev) => {
-        let __data__ = ev.data as string | T;
-        if (typeof __data__ === 'string') {
-          __data__ = JSON.parse(__data__) as T;
+        let __data__ = ev.data as string | Response<T>;
+        if (typeof __data__ === "string") {
+          __data__ = JSON.parse(__data__) as Response<T>;
         }
 
-        callback(__data__);
+        const __error__ = SocketError.checkError(__data__);
+        if (__error__) {
+          onError?.(__error__);
+          return;
+        }
 
-      }
+        if (__data__["namespace"] === namespace) onSuccess(__data__.data);
+      };
     }
     return false;
   }
