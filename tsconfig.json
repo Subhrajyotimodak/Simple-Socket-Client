@@ -11,17 +11,6 @@
     "moduleResolution": "node",
     "outDir": "./dist",
     "jsx": "react",
-    "paths": {
-      "core": [
-        "./core/"
-      ],
-      "react-provider": [
-        "./react-provider/"
-      ],
-      "utils": [
-        "./utils/"
-      ]
-    },
     "composite": true,
     "declaration": true,
     "esModuleInterop": true,
@@ -29,12 +18,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "./core",
-    "./react-provider",
-    "./utils",
-    "./index.ts"
-  ],
   "exclude": [
     "node_modules",
     "dist"
