@@ -31,3 +31,4 @@ export function useSocket(namespace: string) {
 
   throw new Error("Unable to find socket with namespace " + namespace);
 }
+
