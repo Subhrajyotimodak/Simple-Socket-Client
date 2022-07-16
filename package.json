@@ -10,9 +10,9 @@
   },
   "directories": {
     "bin": {
-      "core": "./core",
-      "react": "./react-provider",
-      "utils": "./utils"
+      "core": "./dist/core",
+      "react": "./dist/react-provider",
+      "utils": "./dist/utils"
     }
   },
   "keywords": [],
@@ -22,8 +22,8 @@
     "typescript": "^4.7.4"
   },
   "workspaces": [
-    "@react",
-    "@core",
-    "@utils"
+    "react-provider",
+    "core",
+    "utils"
   ]
 }
