@@ -13,7 +13,7 @@ export default class SocketError extends Error {
     this.code = code;
     this.name = name;
     this.message = message;
-    this.stack = super.stack;
+    // this.stack = super.stack;
   }
 
   static checkError(response: Response) {
