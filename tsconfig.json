@@ -7,9 +7,9 @@
     "outDir": "./dist",
     "jsx" : "preserve",
     "paths": {
-      "@core": ["./@core/"],
-      "@react": ["./@react/"],
-      "@utils": ["./@utils/"]
+      "@core": ["./core/"],
+      "@react": ["./react-provider/"],
+      "@utils": ["./utils/"]
     },
     "declaration": true,
     "esModuleInterop": true,

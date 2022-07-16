@@ -9,9 +9,9 @@
     "build": "rm -rf dist && tsc"
   },
   "bin": {
-    "core": "./@core",
-    "react": "./@react",
-    "utils": "./@utils"
+    "core": "./core",
+    "react": "./react-provider",
+    "utils": "./utils"
   },
   "directories": {
     "lib": "dist"
