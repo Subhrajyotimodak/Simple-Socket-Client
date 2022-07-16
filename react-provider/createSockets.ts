@@ -1,4 +1,4 @@
-import { Socket, SocketParams } from "../../core";
+import Socket, { SocketParams } from "../core/Socket";
 import { Providers } from "./SocketProvider";
 
 interface Params {

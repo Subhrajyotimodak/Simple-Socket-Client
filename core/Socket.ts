@@ -1,4 +1,5 @@
-import { Response, SocketError, Request } from "../../utils";
+import { Response, Request } from "../utils/typedefs";
+import SocketError from "../utils/error";
 
 export interface SocketParams {
   auth: string;

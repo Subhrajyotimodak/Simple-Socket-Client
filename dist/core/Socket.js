@@ -1,6 +1,9 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const utils_1 = require("../../utils");
+const error_1 = __importDefault(require("../utils/error"));
 class Socket {
     websocket;
     connected = false;
@@ -44,7 +47,7 @@ class Socket {
                 if (typeof __data__ === "string") {
                     __data__ = JSON.parse(__data__);
                 }
-                const __error__ = utils_1.SocketError.checkError(__data__);
+                const __error__ = error_1.default.checkError(__data__);
                 if (__error__) {
                     onError?.(__error__);
                     return;

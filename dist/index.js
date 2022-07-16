@@ -22,11 +22,18 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.utils = exports.reactProvider = exports.core = void 0;
-const core = __importStar(require("./core"));
+const Socket_1 = __importDefault(require("./core/Socket"));
+const createSockets_1 = require("./react-provider/createSockets");
+const SocketProvider_1 = __importStar(require("./react-provider/SocketProvider"));
+const error_1 = __importStar(require("./utils/error"));
+const core = { Socket: Socket_1.default };
 exports.core = core;
-const reactProvider = __importStar(require("./react-provider"));
+const reactProvider = { SocketProvider: SocketProvider_1.default, useSocket: SocketProvider_1.useSocket, createSockets: createSockets_1.createSockets };
 exports.reactProvider = reactProvider;
-const utils = __importStar(require("./utils"));
+const utils = { SocketError: error_1.default, isSocketError: error_1.isSocketError };
 exports.utils = utils;
