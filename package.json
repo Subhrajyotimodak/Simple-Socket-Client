@@ -11,7 +11,7 @@
   "directories": {
     "bin": {
       "core": "./dist/core",
-      "react": "./dist/react-provider",
+      "react-provider": "./dist/react-provider",
       "utils": "./dist/utils"
     }
   },

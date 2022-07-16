@@ -1,5 +1,5 @@
 import React from "react";
-import Socket from "@core";
+import Socket from "core";
 interface Props {
     providers: {
         [key: string]: Socket;

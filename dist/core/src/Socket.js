@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _utils_1 = require("@utils");
+const utils_1 = require("utils");
 class Socket {
     websocket;
     connected = false;
@@ -44,7 +44,7 @@ class Socket {
                 if (typeof __data__ === "string") {
                     __data__ = JSON.parse(__data__);
                 }
-                const __error__ = _utils_1.SocketError.checkError(__data__);
+                const __error__ = utils_1.SocketError.checkError(__data__);
                 if (__error__) {
                     onError?.(__error__);
                     return;
