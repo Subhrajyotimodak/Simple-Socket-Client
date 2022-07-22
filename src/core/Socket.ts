@@ -12,14 +12,14 @@ export default class Socket {
   private connected = false;
 
   constructor(url: string, params: SocketParams) {
-    const urlParams = new URLSearchParams();
+    let urlParams = "";
     Object.keys(params).forEach((key) => {
       const data = params[key] as string;
       if (data) {
-        urlParams.set(key, data);
+        urlParams += `&${key}=${data}`;
       }
     });
-    const _url = `${url}?${urlParams.toString()}`;
+    const _url = `${url}?${urlParams}`;
     this.websocket = new WebSocket(_url);
     this.connect();
   }
@@ -64,7 +64,6 @@ export default class Socket {
           return;
         }
         onSuccess(__data__.data);
-
       };
     }
     return false;
