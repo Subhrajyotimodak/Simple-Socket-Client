@@ -46,7 +46,6 @@ export default class Socket {
   }
 
   recieve<T = any>(
-    namespace: string,
     onSuccess: (data: T) => void,
     onError?: (error: SocketError) => void
   ) {
