@@ -35,12 +35,8 @@ export default class Socket {
     this.connected = false;
   }
 
-  send<T = {}>(namespace: string, data: T) {
-    const __data__ = {
-      namespace,
-      data,
-    } as Request<T>;
-    const request = JSON.stringify(__data__);
+  send<T = {}>(data: T) {
+    const request = JSON.stringify(data);
 
     if (this.connected) {
       this.websocket.send(request);
@@ -64,10 +60,11 @@ export default class Socket {
         const __error__ = SocketError.checkError(__data__);
         if (__error__) {
           onError?.(__error__);
+          this.connect();
           return;
         }
+        onSuccess(__data__.data);
 
-        if (__data__["namespace"] === namespace) onSuccess(__data__.data);
       };
     }
     return false;
