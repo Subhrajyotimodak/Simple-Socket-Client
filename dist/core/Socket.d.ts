@@ -10,6 +10,6 @@ export default class Socket {
     constructor(url: string, params: SocketParams);
     connect(): void;
     disconnect(): void;
-    send<T = {}>(namespace: string, data: T): boolean;
-    recieve<T = any>(namespace: string, onSuccess: (data: T) => void, onError?: (error: SocketError) => void): boolean;
+    send<T = {}>(data: T): boolean;
+    recieve<T = any>(onSuccess: (data: T) => void, onError?: (error: SocketError) => void): boolean;
 }

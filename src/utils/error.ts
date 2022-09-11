@@ -23,7 +23,7 @@ export default class SocketError extends Error {
     const error = new SocketError(
       response.code,
       response.status,
-      response.message
+      response.data
     );
     if (response.code >= 400 && response.code <= 499) {
       error.type = "client";
